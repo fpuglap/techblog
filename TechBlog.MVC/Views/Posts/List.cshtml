@@ -1,0 +1,11 @@
+﻿@model PostsListViewModel
+
+<div class="container mt-5">
+    <div class="row">
+        @foreach (var post in Model.Posts)
+        {
+            <partial name="_PostCard" model="post" />
+        }
+    </div>
+</div>
+

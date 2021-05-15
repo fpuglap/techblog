@@ -1,0 +1,18 @@
+﻿@model Post
+
+@*<img alt="@Model.Title" src="@Model.ImageThumbnailUrl">*@
+
+<div class="container mt-5">
+    <span class="badge badge-pill badge-success float-right">@Model.Views Views</span>
+    <h2>@Model.Title</h2>
+    <div class="caption-full">
+        <h4>@Model.Description</h4>
+        <p>@Model.Content</p>
+    </div>
+    <p class="button">
+        <a class="btn btn-primary"
+           asp-controller="Coffees"
+           asp-action="AddToCoffeesBuyed"
+           asp-route-id="@Model.Id">Buy me a Coffee</a>
+    </p>
+</div>
